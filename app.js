@@ -21,6 +21,7 @@ program
       program.help();
     }
 
+    kaizoku.setURL(program.url);
     kaizoku.search(keywords);
   });
 
@@ -37,6 +38,7 @@ program
       program.help();
     }
 
+    kaizoku.setURL(program.url);
     kaizoku.download(keywords);
   });
 
@@ -52,7 +54,7 @@ program
       console.log('Error: category missing. Use kaizoku cat to see a list of available categories.');
       program.help();
     }
-
+    kaizoku.setURL(program.url);
     kaizoku.top(category);
   });
 
@@ -79,6 +81,13 @@ program
 
     console.log(table.toString());
   });
+
+/**
+ * URL option.
+ * Change the url used to access the pirate bay
+ */
+program
+  .option('-u, --url <url>', 'set a different URL to access the pirate bay.')
 
 program.parse(process.argv);
 
