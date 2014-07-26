@@ -22,7 +22,10 @@ program
     }
 
     kaizoku.setURL(program.url);
-    kaizoku.search(keywords);
+    kaizoku.search(keywords, function(torrents) {
+      // Log output to terminal.
+      kaizoku.displayTorrents(torrents);
+    });
   });
 
 /**
