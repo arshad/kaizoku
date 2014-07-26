@@ -70,7 +70,10 @@ program
       program.help();
     }
     kaizoku.setURL(program.url);
-    kaizoku.top(category);
+    kaizoku.top(category, function(torrents) {
+      // Log output to terminal.
+      kaizoku.displayTorrents(torrents);
+    });
   });
 
 /**
