@@ -2,6 +2,7 @@
 var program = require('commander')
   , kaizoku = require('./lib/kaizoku.js')
   , Table = require('cli-table')
+  , exec = require('child_process').exec
   ;
 
 // Get version from package.json.
@@ -42,7 +43,18 @@ program
     }
 
     kaizoku.setURL(program.url);
-    kaizoku.download(keywords);
+    kaizoku.search(keywords, function(torrents) {
+      // Get the magnet link for the first result.
+      // Assumming the first result has the most seeds.
+      var magnentLink = torrents[0].magnet;
+
+      // Display the magnet link.
+      console.log("Magnet link for top torrent:");
+      console.log(magnentLink);
+
+      // Open the magnent link.
+      exec("open " + magnentLink);
+    });
   });
 
 /**
