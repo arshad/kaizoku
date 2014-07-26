@@ -4,6 +4,24 @@ var chai = require('chai')
   ;
 
 describe('Kaizoku', function(){
+  // Test search.
+  describe('#search("Game of Thrones)', function() {
+    it('should return an array of torrents', function() {
+      kaizoku.search("Game of Thrones", function(torrents) {
+        chai.expect(torrents).to.not.be.empty();
+      });
+    });
+  });
+
+  // Test empty search.
+  describe('#search("lipsum dolor")', function() {
+    it('should return an empty array', function() {
+      kaizoku.search("lipsum dolor", function(torrents) {
+        chai.expect(torrents).to.be.empty();
+      });
+    });
+  });
+
   // Test categories.
   describe('#getCategories()', function(){
     it('should return a list of categories', function(){
