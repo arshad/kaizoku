@@ -2,6 +2,8 @@ Kaizoku
 ===
 A CLI for thepiratebay.
 
+[![Build Status](https://travis-ci.org/arshad/kaizoku.svg?branch=master)](https://travis-ci.org/arshad/kaizoku)
+
 Installation
 --------------
 
