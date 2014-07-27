@@ -4,6 +4,8 @@ A CLI for thepiratebay.
 
 [![Build Status](https://travis-ci.org/arshad/kaizoku.svg?branch=master)](https://travis-ci.org/arshad/kaizoku)
 
+**You might also be interested in [subdb-cli](https://github.com/arshad/subdb-cli), download subtitles from the CLI.**
+
 Installation
 --------------
 
