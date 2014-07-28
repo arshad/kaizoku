@@ -15,6 +15,7 @@ program.version(version)
  */
 program
   .command('search [keywords]')
+  .alias('s')
   .description('Use this command to search torrents.')
   .action(function(keywords, options){
     if (!keywords) {
@@ -35,6 +36,7 @@ program
  */
 program
   .command('download [keywords]')
+  .alias('d')
   .description('Use this command to quickly download a torrent.')
   .action(function(keywords, options){
     if (!keywords) {
@@ -63,6 +65,7 @@ program
  */
 program
   .command('top [category]')
+  .alias('t')
   .description('Use this command to see top torrents.')
   .action(function(category, options){
     if (!category) {
