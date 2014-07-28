@@ -9,14 +9,15 @@ A CLI for thepiratebay.
 Installation
 --------------
 
-    npm install kaizoku -g
+    $ npm install kaizoku -g
 
 Usage
 --------------
 
 #### Download
 
-    kaizoku download "Game of Thrones s01e01"
+    $ kaizoku download "Game of Thrones s01e01"
+    $ kaizoku d "Game of Thrones s01e01"
     
 This will automatically:
 
@@ -28,16 +29,17 @@ This will automatically:
 
 #### Search
 
-    kaizoku search "Game of Thrones s01e01"
+    $ kaizoku search "Game of Thrones s01e01"
+    $ kaizoku s "Game of Thrones s01e01"
     
 ![alt tag](https://raw.githubusercontent.com/arshad/kaizoku/master/screenshot.png)
 
 #### Top
 Displays a list of top torrents by category.
 
-    kaizoku top movies
-
-    kaizoku top tvshows
+    $ kaizoku top movies
+    $ kaizoku top tvshows
+    $ kaizoku t movies
     
 To see a list of all categories:
 
