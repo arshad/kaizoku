@@ -3,6 +3,7 @@ var program = require('commander')
   , kaizoku = require('./lib/kaizoku.js')
   , Table = require('cli-table')
   , exec = require('child_process').exec
+  , open = require("open")
   ;
 
 // Get version from package.json.
@@ -55,7 +56,8 @@ program
       console.log(magnentLink);
 
       // Open the magnent link.
-      exec("open " + magnentLink);
+      // exec("open " + magnentLink);
+      open(magnentLink);
     });
   });
 
